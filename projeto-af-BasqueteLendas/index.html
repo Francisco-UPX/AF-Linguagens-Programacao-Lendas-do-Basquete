@@ -1,0 +1,171 @@
+<!--
+AF - Avaliação Final - Linguagens de Programação
+Tema do Projeto: Lendas do Basquete - Jogadores Lendários da NBA
+Aluno: Francisco Santana Almeida - RA: 252259
+Professor: Abimael de Oliveira
+Data de entrega: 07/06
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lendas do Basquete - Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                     Lendas do Basquete
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção do Carrossel -->
+        <section class="hero">
+            <div id="carrosselLendas" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosselLendas" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carrosselLendas" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carrosselLendas" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/1722136.jpg" class="d-block w-100" alt="Michael Jordan - Lenda do Basquete">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Michael Jordan</h2>
+                            <p>"O melhor jogador de todos os tempos" - 6 títulos da NBA</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/wp7295259.jpg" class="d-block w-100" alt="LeBron James - O Rei da NBA">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>LeBron James</h2>
+                            <p>O Rei da NBA - Maior pontuador da história</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/2011541.jpg" class="d-block w-100" alt="Kobe Bryant - Mamba Mentality">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Kobe Bryant</h2>
+                            <p>Mamba Mentality - 5 títulos pelo Lakers</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrosselLendas" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrosselLendas" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Seção de Apresentação -->
+        <section class="apresentacao py-5">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold mb-3">🏆 Lendas do Basquete 🏆</h1>
+                <p class="lead fs-4">Conheça os jogadores que marcaram época na NBA e se tornaram eternos ídolos do esporte.</p>
+                <p class="fs-5">De Michael Jordan a LeBron James, passando por Kobe Bryant, Magic Johnson, Larry Bird e muitas outras lendas que fizeram história nas quadras.</p>
+                <hr class="my-4 w-50 mx-auto">
+                <p class="text-muted">Explore nossa galeria e saiba mais sobre cada um desses gigantes do basquete!</p>
+            </div>
+        </section>
+
+        <!-- Seção de Destaques (Cards) -->
+        <section class="destaques py-4 pb-5">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">🌟 Lendas em Destaque 🌟</h2>
+                <div class="row g-4">
+                    <!-- Card 1 - Michael Jordan -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow card-personalizado">
+                            <img src="./img/michael-jordan-2560x1440-11713.jpg" class="card-img-top" alt="Michael Jordan - Chicago Bulls">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold">Michael Jordan</h3>
+                                <p class="card-text">6 títulos da NBA, 6x Finals MVP, 5x MVP da temporada. Considerado por muitos o maior jogador de todos os tempos.</p>
+                                <p class="card-text"><small class="text-muted">Chicago Bulls | Ala-armador</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 - LeBron James -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow card-personalizado">
+                            <img src="./img/lebron-james-american-basketball-player-nba-los-angeles-4928x3280-7605.jpg" class="card-img-top" alt="LeBron James - Cleveland/Lakers">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold">LeBron James</h3>
+                                <p class="card-text">4 títulos da NBA, 4x Finals MVP, 4x MVP. Maior pontuador da história da liga.</p>
+                                <p class="card-text"><small class="text-muted">Cleveland/Heat/Lakers | Ala</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 - Kobe Bryant -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow card-personalizado">
+                            <img src="./img/kobe-bryant-for-desktop-background-wallpaper-preview.jpg" class="card-img-top" alt="Kobe Bryant - Los Angeles Lakers">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold">Kobe Bryant</h3>
+                                <p class="card-text">5 títulos da NBA, 2x Finals MVP, 1x MVP. Ícone do Los Angeles Lakers e da "Mamba Mentality".</p>
+                                <p class="card-text"><small class="text-muted">Los Angeles Lakers | Ala-armador</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="galeria.html" class="btn btn-warning btn-lg fw-bold">Ver Galeria Completa →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de chamada para contato -->
+        <section class="chamada-contato bg-light py-5">
+            <div class="container text-center">
+                <h2 class="mb-3">Ficou com alguma dúvida?</h2>
+                <p class="mb-4">Entre em contato conosco para saber mais sobre as lendas do basquete!</p>
+                <a href="contato.html" class="btn btn-outline-primary btn-lg">Fale Conosco →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container text-center">
+            <p class="mb-2">🏀 Lendas do Basquete - Projeto Acadêmico AF 🏀</p>
+            <p class="mb-2">Francisco Santana Almeida - RA: 252259</p>
+            <p class="mb-2">Turma: Linguagens de Programação | Disciplina: AF - 2026/1</p>
+            <p class="mb-0 small">&copy; 2026 - Projeto acadêmico sem fins comerciais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS próprio -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
