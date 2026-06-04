@@ -1,0 +1,254 @@
+<!--
+AF - Avaliação Final - Linguagens de Programação
+Tema do Projeto: Lendas do Basquete - Jogadores Lendários da NBA
+Aluno: Francisco Santana Almeida - RA: 252259
+Professor: Abimael de Oliveira
+Data de entrega: 07/06
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lendas do Basquete - Galeria</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    🏀 Lendas do Basquete
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Título da página -->
+        <section class="titulo-pagina py-5 bg-dark text-white text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">🏀 Galeria de Lendas 🏀</h1>
+                <p class="lead">Conheça as maiores lendas que já passaram pela NBA</p>
+            </div>
+        </section>
+
+        <!-- Filtros / Categorias visuais -->
+        <section class="filtros py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="btn-group flex-wrap gap-2 justify-content-center" role="group">
+                            <button class="btn btn-outline-warning btn-filtro active" data-filtro="todos">Todos</button>
+                            <button class="btn btn-outline-warning btn-filtro" data-filtro="anos80">Anos 80</button>
+                            <button class="btn btn-outline-warning btn-filtro" data-filtro="anos90">Anos 90</button>
+                            <button class="btn btn-outline-warning btn-filtro" data-filtro="anos2000">Anos 2000</button>
+                            <button class="btn btn-outline-warning btn-filtro" data-filtro="atual">Atualidade</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Cards -->
+        <section class="galeria py-4 pb-5">
+            <div class="container">
+                <div class="row g-4" id="containerCards">
+                    <!-- Card 1 - Michael Jordan (Anos 90) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="anos90">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/3019657.jpg" class="card-img-top" alt="Michael Jordan - Chicago Bulls">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Michael Jordan</h2>
+                                <p class="card-text">6 títulos, 6x Finals MVP, 5x MVP. Considerado o maior de todos os tempos.</p>
+                                <p class="card-text"><small class="text-muted">Chicago Bulls | Anos 90</small></p>
+                                <span class="badge bg-warning text-dark">Lenda Máxima</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 - LeBron James (Atual) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="atual">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/lebron-james-nba-miami-heat-jersey-6-basketball-slam-dunk-xpqpb1pb8ztn7xxw.jpg" class="card-img-top" alt="LeBron James - Los Angeles Lakers">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">LeBron James</h2>
+                                <p class="card-text">4 títulos, 4x Finals MVP, 4x MVP. Maior pontuador da história da NBA.</p>
+                                <p class="card-text"><small class="text-muted">Cleveland/Heat/Lakers | Atualidade</small></p>
+                                <span class="badge bg-primary">Em atividade</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 - Kobe Bryant (Anos 2000) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="anos2000">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/kobe-bryant-4k-dnz6nzootzly9sgn.jpg" class="card-img-top" alt="Kobe Bryant - Los Angeles Lakers">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Kobe Bryant</h2>
+                                <p class="card-text">5 títulos, 2x Finals MVP, 1x MVP. Ícone do Lakers e da "Mamba Mentality".</p>
+                                <p class="card-text"><small class="text-muted">Los Angeles Lakers | Anos 2000</small></p>
+                                <span class="badge bg-dark">In Memoriam</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 - Magic Johnson (Anos 80) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="anos80">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/1428699.jpg" class="card-img-top" alt="Magic Johnson - Los Angeles Lakers">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Magic Johnson</h2>
+                                <p class="card-text">5 títulos, 3x Finals MVP, 3x MVP. Revolucionou a posição de armador.</p>
+                                <p class="card-text"><small class="text-muted">Los Angeles Lakers | Anos 80</small></p>
+                                <span class="badge bg-success">Showtime</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 - Larry Bird (Anos 80) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="anos80">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/897280-1920x1080-desktop-full-hd-larry-bird-background-image.jpg" class="card-img-top" alt="Larry Bird - Boston Celtics">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Larry Bird</h2>
+                                <p class="card-text">3 títulos, 2x Finals MVP, 3x MVP. Um dos maiores arremessadores da história.</p>
+                                <p class="card-text"><small class="text-muted">Boston Celtics | Anos 80</small></p>
+                                <span class="badge bg-success">Larry Legend</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 - Shaquille O'Neal (Anos 2000) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="anos2000">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/1350884.jpg" class="card-img-top" alt="Shaquille O'Neal - Los Angeles Lakers">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Shaquille O'Neal</h2>
+                                <p class="card-text">4 títulos, 3x Finals MVP, 1x MVP. O jogador mais dominante do garrafão.</p>
+                                <p class="card-text"><small class="text-muted">Lakers/Heat | Anos 2000</small></p>
+                                <span class="badge bg-warning text-dark">Diesel</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 - Tim Duncan (Anos 2000) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="anos2000">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/CnGgFmzUMAAr79p.jpg" class="card-img-top" alt="Tim Duncan - San Antonio Spurs">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Tim Duncan</h2>
+                                <p class="card-text">5 títulos, 3x Finals MVP, 2x MVP. O melhor Ala-pivô da história.</p>
+                                <p class="card-text"><small class="text-muted">San Antonio Spurs | Anos 2000</small></p>
+                                <span class="badge bg-secondary">Big Fundamental</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 8 - Allen Iverson (Anos 2000) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="anos2000">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/allen-iverson-vs-michael-jordan-u30ko63lofdy8r0z.jpg" class="card-img-top" alt="Allen Iverson - Philadelphia 76ers">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Allen Iverson</h2>
+                                <p class="card-text">1x MVP, 4x cestinha da NBA. Um dos maiores dribladores da história. Ídolo do Aluno😜.</p>
+                                <p class="card-text"><small class="text-muted">Philadelphia 76ers | Anos 2000</small></p>
+                                <span class="badge bg-info text-dark">The Answer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 9 - Stephen Curry (Atual) -->
+                    <article class="col-md-6 col-lg-4 card-item" data-categoria="atual">
+                        <div class="card h-100 shadow card-galeria">
+                            <img src="./img/7409195.jpg" class="card-img-top" alt="Stephen Curry - Golden State Warriors">
+                            <div class="card-body">
+                                <h2 class="card-title h5 fw-bold">Stephen Curry</h2>
+                                <p class="card-text">4 títulos, 1x Finals MVP, 2x MVP. Revolucionou o jogo com as bolas de 3 pontos.</p>
+                                <p class="card-text"><small class="text-muted">Golden State Warriors | Atualidade</small></p>
+                                <span class="badge bg-primary">Chef Curry</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Novidades -->
+        <section class="novidades py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold"> Novidades do Mundo NBA </h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <span class="display-1">🏆</span>
+                                <h3 class="h5 mt-3 fw-bold">Playoffs 2025</h3>
+                                <p class="card-text">A temporada regular chegou ao fim. Confira os confrontos dos playoffs!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <span class="display-1">⭐</span>
+                                <h3 class="h5 mt-3 fw-bold">All-Star Game</h3>
+                                <p class="card-text">Novo formato do Jogo das Estrelas promete mais emoção.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <span class="display-1">📊</span>
+                                <h3 class="h5 mt-3 fw-bold">Recordes Históricos</h3>
+                                <p class="card-text">LeBron James atinge nova marca histórica na carreira.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container text-center">
+            <p class="mb-2">🏀 Lendas do Basquete - Projeto Acadêmico AF 🏀</p>
+            <p class="mb-2">Francisco Santana Almeida - RA: 252259</p>
+            <p class="mb-2">Turma: Linguagens de Programação | Disciplina: AF - 2026/1</p>
+            <p class="mb-0 small">&copy; 2026 - Projeto acadêmico sem fins comerciais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnTopo" class="btn-topo" title="Voltar ao topo">↑</button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS próprio -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
