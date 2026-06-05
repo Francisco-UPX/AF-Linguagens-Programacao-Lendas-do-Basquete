@@ -27,4 +27,4 @@ Site sobre as maiores lendas da NBA, apresentando jogadores que marcaram época 
 - Animações CSS/JS (hover nos cards, transições, botão voltar ao topo)
 
 ## Link do Repositório
-[https://github.com/Francisco-UPX/ProjetoBasquete.git]
+[https://github.com/Francisco-UPX/AF-Linguagens-Programacao-Lendas-do-Basquete.git]

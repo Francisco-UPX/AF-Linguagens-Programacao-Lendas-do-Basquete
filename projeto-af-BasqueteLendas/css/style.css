@@ -1,0 +1,300 @@
+/*
+AF - Avaliação Final - Linguagens de Programação
+Tema do Projeto: Lendas do Basquete - Jogadores Lendários da NBA
+Aluno: Francisco Santana Almeida - RA: 252259
+Professor: Abimael de Oliveira
+Data de entrega: 07/06
+*/
+
+/* ===== VARIÁVEIS ===== */
+:root {
+    --cor-primaria: #0d6efd;
+    --cor-secundaria: #212529;
+    --cor-dourada: #f39c12;
+    --cor-laranja: #e67e22;
+    --cor-clara: #f8f9fa;
+    --cor-escura: #111;
+    --sombra-padrao: 0 5px 15px rgba(0,0,0,0.1);
+    --sombra-hover: 0 10px 25px rgba(0,0,0,0.2);
+    --transicao-padrao: all 0.3s ease;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* ===== SEÇÕES ===== */
+section {
+    padding: 60px 0;
+}
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cor-dourada), var(--cor-laranja));
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transicao-padrao);
+    box-shadow: var(--sombra-padrao);
+    z-index: 1000;
+}
+
+.btn-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-topo:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+/* ===== CARDS PADRÃO ===== */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transicao-padrao);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-hover);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* ===== CARROSSEL ===== */
+.carousel-item img {
+    filter: brightness(0.7);
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ===== BOTÕES ===== */
+.btn-warning {
+    background: linear-gradient(135deg, var(--cor-dourada), var(--cor-laranja));
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: var(--transicao-padrao);
+}
+
+.btn-warning:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, var(--cor-laranja), var(--cor-dourada));
+    color: white;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--cor-primaria);
+    font-weight: bold;
+    transition: var(--transicao-padrao);
+}
+
+.btn-outline-primary:hover {
+    transform: scale(1.05);
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* ===== BOTÕES DE FILTRO ===== */
+.btn-filtro {
+    transition: var(--transicao-padrao);
+    margin: 5px;
+}
+
+.btn-filtro.active {
+    background-color: var(--cor-dourada);
+    border-color: var(--cor-dourada);
+    color: white;
+}
+
+.btn-filtro:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: auto;
+}
+
+.rodape p {
+    margin-bottom: 8px;
+}
+
+/* ===== TÍTULO DAS PÁGINAS ===== */
+.titulo-pagina {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    margin-bottom: 0;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-item {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-topo {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 220px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+    
+    .btn-filtro {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* ===== FLEXBOX ===== */
+.d-flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-3 {
+    gap: 1rem;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-contato .form-control,
+.form-contato .form-select {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    transition: var(--transicao-padrao);
+}
+
+.form-contato .form-control:focus,
+.form-contato .form-select:focus {
+    border-color: var(--cor-dourada);
+    box-shadow: 0 0 0 0.2rem rgba(243, 156, 18, 0.25);
+}
+
+/* ===== CARD DA GALERIA ===== */
+.card-galeria {
+    cursor: pointer;
+}
+
+.card-galeria .badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
