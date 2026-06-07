@@ -19,7 +19,6 @@ Data de entrega: 07/06
     --transicao-padrao: all 0.3s ease;
 }
 
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -39,12 +38,10 @@ img {
     display: block;
 }
 
-/* ===== TÍTULOS ===== */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-/* ===== SEÇÕES ===== */
 section {
     padding: 60px 0;
 }
@@ -297,4 +294,13 @@ section {
 .card-galeria .badge {
     font-size: 0.8rem;
     padding: 5px 10px;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    outline: none !important;
 }
